@@ -6,14 +6,7 @@
 <html>
 
 <!-- inicio do head -->
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="shortcut icon" type="image/png" href="<c:url value="/resources/images/logo_portal.ico" />"/>
-	<title>Login | Help Desk Sinapsis</title>
-	<link href="resources/css/bootstrap.min.css" rel="stylesheet">
-	<link href="resources/fonts/font-awesome.min.css" rel="stylesheet">
-</head>
+<%@include file="../templates/header.jsp"%>
 <!-- fim do head -->
 
 <body id="login-init">
@@ -49,9 +42,8 @@
 		<!-- /.col-->
 	</div>
 	<!-- /.row -->
-
-	<script src="resources/js/jquery-3.3.1.min.js"></script>
-	<script src="resources/js/bootstrap.min.js"></script>
+	
+	<%@include file="../templates/scripts.jsp"%>
 		
 </body>
 </html>
