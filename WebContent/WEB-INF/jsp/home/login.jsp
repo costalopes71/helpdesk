@@ -13,7 +13,6 @@
 	<title>Login | Help Desk Sinapsis</title>
 	<link href="resources/css/bootstrap.min.css" rel="stylesheet">
 	<link href="resources/fonts/font-awesome.min.css" rel="stylesheet">
-    <link href="resources/css/theme.css" rel="stylesheet">
 </head>
 <!-- fim do head -->
 
@@ -23,7 +22,7 @@
 			class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
 			<div class="login-panel panel panel-default">
 				<div class="panel-heading text-center">
-					<img class="img-responsive img-center" alt="etc" src="<c:url value="/resources/images/logo.png" />">
+					<img class="img-responsive img-center" alt="etc" src="<c:url value="/resources/images/logo.png"/>"/>
 				</div>
 				<div class="text-center">
 					<h4>Help Desk Sinapsis</h4>
@@ -33,10 +32,10 @@
 					<form:form id="loginForm" modelAttribute="login" action="${action}" method="post">
 						<fieldset>
 							<div class="form-group">
-								<form:input path="username" name="username" id="username" class="form-control" placeholder="Usuário"/>
+								<form:input path="username" name="" id="username" class="form-control" placeholder="Usuário"/>
 							</div>
 							<div class="form-group">
-								<form:password path="password" name="password" id="password" class="form-control" placeholder="Senha"/>
+								<form:password path="" name="password" id="password" class="form-control" placeholder="Senha"/>
 							</div>
 							<form:button id="login-init" name="login" class="btn btn-primary btn-block">Login</form:button>
 						</fieldset>
