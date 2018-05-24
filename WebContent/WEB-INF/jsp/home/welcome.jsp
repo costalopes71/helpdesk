@@ -52,6 +52,7 @@
 					<li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
 					<li class="nav-item"><a class="nav-link"  href="#">Logout</a></li>
 				</ul>
+			
 			</div>
 		</div>
 	</nav>
@@ -64,6 +65,14 @@
 		<ol class="breadcrumb">
 			<li class="breadcrumb-item"><a href="index.html">Home</a></li>
 			<li class="breadcrumb-item active">Quem Somos</li>
+			<form class="form-inline" id="breadcrumb-faq">
+			    <div class="input-group">
+			      <input type="text" class="form-control" placeholder="Digite sua dúvida aqui..." aria-label="Username" aria-describedby="basic-addon1">
+			      <div class="input-group-prepend">
+			        <button class="input-group-text" id="basic-addon1">Ok</button>
+			      </div>
+			    </div>
+ 			 </form>
 		</ol>
 
 		<!-- Intro Content -->
@@ -88,30 +97,31 @@
 			</div>
 		</div>
 		<div class="row text-justify">
-			<div class="col-lg-12">
+			
+			<div class="col-lg-6">
 				<p>A equipe da Sinapsis é composta por profissionais com
 					pós-graduação e grande experiência no setor elétrico e de energia.
 					Esta vivência inclui a atuação em áreas como P&D aplicada,
 					engenharia, regulação de serviços públicos e desenvolvimento de
 					aplicativos computacionais, com soluções, dentre outros setores,
 					para geração, transmissão e distribuição de energia elétrica e gás.</p>
-			</div>
-			<div class="col-lg-6">
-
 				<p>Dentre os parceiros financiadores dos projetos desenvolvidos
 					pela Sinapsis destacam-se: AES Eletropaulo, CEMIG Distribuição,
 					Light Serviços de Eletricidade, Grupo EDP, CELESC Distribuição, AES
 					Sul, AES Tietê, Federação das Cooperativas de Energia, Telefonia e
 					Desenvolvimento Rural do Rio Grande do Sul – FECOERGS, DUKE Energy,
 					Empresa Metropolitana de Águas e Energia – EMAE, entre outras.</p>
-				<p>Especializações: Distribuição de Energia Elétrica, Redes
-					Elétricas Inteligentes, Regulação da Indústria de Energia,
-					Comercialização de Energia, Redes Subterrâneas, Software para
-					análise de redes elétricas.</p>
+				
 			</div>
 			<div class="col-lg-6">
 				<img class="img-fluid rounded mb-4" src="resources/images/aries.png"
 					alt="">
+			</div>
+			<div class="col-lg-12">
+				<p>Especializações: Distribuição de Energia Elétrica, Redes
+					Elétricas Inteligentes, Regulação da Indústria de Energia,
+					Comercialização de Energia, Redes Subterrâneas, Software para
+					análise de redes elétricas.</p>
 			</div>
 		</div>
 		<!-- /.row -->
@@ -126,10 +136,9 @@
 
 				<div class="col-md-4">
 					<p style="font-size: 18px;">
-						<span class="fa fa fa-laptop"></span> OUR OFFERS
+						<span class="fa fa fa-laptop"></span> Sobre HelpDesk
 					</p>
-					<p>The standard chunk of Lorem Ipsum used since the 1500s is
-						reproduced below for those interested.</p>
+					<p>Serviço de atendimento aos clientes que procuram por soluções e esclarecimentos.</p>
 				</div>
 
 				<div class="col-md-4">
