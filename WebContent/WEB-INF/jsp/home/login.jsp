@@ -23,15 +23,20 @@
 				<div style="margin-bottom: 50px;" class="panel-body">
 					<c:url value="/login/logar" var="action"/>
 					<form:form id="loginForm" modelAttribute="login" action="${action}" method="post">
+						
 						<fieldset>
+							
 							<div class="form-group">
-								<form:input path="username" name="" id="username" class="form-control" placeholder="Usuário"/>
+								<form:input path="username" name="" id="username" class="form-control" placeholder="E-mail"/>
 							</div>
+							
 							<div class="form-group">
-								<form:password path="" name="password" id="password" class="form-control" placeholder="Senha"/>
+								<form:password path="password" name="password" id="password" class="form-control" placeholder="Senha"/>
 							</div>
+							
 							<form:button id="login-init" name="login" class="btn btn-primary btn-block">Login</form:button>
 						</fieldset>
+						
 					</form:form>
 					<div style="width: 100%; margin: 0 auto;">
 						<h5 style="text-align: center; color: red; padding-bottom: 25px;">${message}</h5>

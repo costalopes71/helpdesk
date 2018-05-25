@@ -127,6 +127,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-
+target/m2e-wtp/web-resources/META-INF/maven/helpdesk/helpdesk/pom.properties
 
 # End of https://www.gitignore.io/api/java,maven,windows,eclipse

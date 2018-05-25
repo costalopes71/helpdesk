@@ -1,5 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -35,8 +37,7 @@
 		<!-- Intro Content -->
 		<div class="row text-justify">
 			<div class="col-lg-6">
-				<img class="img-fluid rounded mb-4"
-					src="resources/images/sinapgridproduto.png" alt="">
+				<img class="img-fluid rounded mb-4"	src="<c:url value="/resources/images/sinapgridproduto.png" />" alt="Sistema SINAPGrid">
 			</div>
 			<div class="col-lg-6">
 				<h2>Sinapsis</h2>
@@ -71,8 +72,7 @@
 				
 			</div>
 			<div class="col-lg-6">
-				<img class="img-fluid rounded mb-4" src="resources/images/aries.png"
-					alt="">
+				<img class="img-fluid rounded mb-4" src="<c:url value="/resources/images/aries.png"/>" alt="Sistema Aries.">
 			</div>
 			<div class="col-lg-12">
 				<p>Especializações: Distribuição de Energia Elétrica, Redes
