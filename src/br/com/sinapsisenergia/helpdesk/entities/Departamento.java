@@ -2,32 +2,29 @@ package br.com.sinapsisenergia.helpdesk.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="PERFIL")
-public class Perfil {
+@Table(name="DEPARTAMENTO")
+public class Departamento {
 
 	@Id
-	@Column(name="id_perfil")
+	@Column(name="id_departamento")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	
 	@Column(name="nome")
-	@Enumerated(EnumType.STRING)
-	private TipoPerfil perfil;
+	private String nome;
 	
-	public Perfil() {
+	public Departamento() {
 
 	}
 
-	public Perfil(TipoPerfil perfil) {
-		this.perfil = perfil;
+	public Departamento(String nome) {
+		this.nome = nome;
 	}
 
 	public int getCodigo() {
@@ -38,12 +35,12 @@ public class Perfil {
 		this.id = codigo;
 	}
 
-	public TipoPerfil getPerfil() {
-		return perfil;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setPerfil(TipoPerfil perfil) {
-		this.perfil = perfil;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 	
 }

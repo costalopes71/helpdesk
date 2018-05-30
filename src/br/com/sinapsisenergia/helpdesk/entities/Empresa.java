@@ -1,6 +1,7 @@
 package br.com.sinapsisenergia.helpdesk.entities;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -9,50 +10,55 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-@Table(name="T_PS_EMPRESA")
 @Entity
+@Table(name="EMPRESA")
 public class Empresa {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id_empresa")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	
-	@Column(name="ds_razao_social", nullable=false, length=150)
-	private String razaoSocial;
+	@Column(name="id_empresa_pai")
+	private int idEmpresaPai;
 	
-	@Column(name="nm_fantasia", nullable=false, length=100)
-	private String nomeFantasia;
+	private String nome;
 	
-	@Column(name="nr_cnpj", length=22)
-	private String cnpj;
+	@ManyToMany(cascade={CascadeType.PERSIST, CascadeType.REMOVE})
+	@JoinTable(name = "USUARIO_EMPRESA", 
+	   joinColumns = {@JoinColumn(name = "id_empresa")},
+	   inverseJoinColumns = {@JoinColumn(name = "id_usuario")})
+	private Set<Usuario> listaUsuarios = new HashSet<>();
 	
-	@ManyToOne(cascade=CascadeType.ALL)
-	@JoinColumn(name="cd_endereco")
+	@OneToOne(mappedBy="empresa", cascade={CascadeType.PERSIST, CascadeType.REMOVE})
 	private Endereco endereco;
 	
-	@Column(name="ds_email", length=150)
-	private String email;
+//	@ManyToMany
+//	@JoinTable(name = "EMPRESA_PRODUTO",  
+//	   joinColumns = {@JoinColumn(name = "id_empresa")},
+//	   inverseJoinColumns = {@JoinColumn(name = "id_produto")})
+//	private Set<Produto> listaProdutos = new HashSet<>();
 	
-	@OneToMany(cascade=CascadeType.ALL)
-	private List<Telefone> listaTelefones;
+	@OneToMany(mappedBy="empresa", cascade={CascadeType.PERSIST, CascadeType.REMOVE})
+	private Set<EmpresaProduto> empresaProduto = new HashSet<>();
 	
 	public Empresa() {
 
 	}
 
-	public Empresa(String razaoSocial, String nomeFantasia, String cnpj, Endereco endereco, String email,
-			List<Telefone> listaTelefones) {
-		this.razaoSocial = razaoSocial;
-		this.nomeFantasia = nomeFantasia;
-		this.cnpj = cnpj;
+	public Empresa(int idEmpresaPai, String nome, Set<Usuario> listaUsuarios, Endereco endereco,
+			Set<EmpresaProduto> empresaProduto) {
+		this.idEmpresaPai = idEmpresaPai;
+		this.nome = nome;
+		this.listaUsuarios = listaUsuarios;
 		this.endereco = endereco;
-		this.email = email;
-		this.listaTelefones = listaTelefones;
+		this.empresaProduto = empresaProduto;
 	}
 
 	public int getId() {
@@ -63,28 +69,28 @@ public class Empresa {
 		this.id = id;
 	}
 
-	public String getRazaoSocial() {
-		return razaoSocial;
+	public int getIdEmpresaPai() {
+		return idEmpresaPai;
 	}
 
-	public void setRazaoSocial(String razaoSocial) {
-		this.razaoSocial = razaoSocial;
+	public void setIdEmpresaPai(int idEmpresaPai) {
+		this.idEmpresaPai = idEmpresaPai;
 	}
 
-	public String getNomeFantasia() {
-		return nomeFantasia;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setNomeFantasia(String nomeFantasia) {
-		this.nomeFantasia = nomeFantasia;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
-	public String getCnpj() {
-		return cnpj;
+	public Set<Usuario> getListaUsuarios() {
+		return listaUsuarios;
 	}
 
-	public void setCnpj(String cnpj) {
-		this.cnpj = cnpj;
+	public void setListaUsuarios(Set<Usuario> listaUsuarios) {
+		this.listaUsuarios = listaUsuarios;
 	}
 
 	public Endereco getEndereco() {
@@ -95,20 +101,20 @@ public class Empresa {
 		this.endereco = endereco;
 	}
 
-	public String getEmail() {
-		return email;
+	public Set<EmpresaProduto> getEmpresaProduto() {
+		return empresaProduto;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setEmpresaProduto(Set<EmpresaProduto> empresaProduto) {
+		this.empresaProduto = empresaProduto;
 	}
 
-	public List<Telefone> getListaTelefones() {
-		return listaTelefones;
-	}
+//	public Set<Produto> getListaProdutos() {
+//		return listaProdutos;
+//	}
+//
+//	public void setListaProdutos(Set<Produto> listaProdutos) {
+//		this.listaProdutos = listaProdutos;
+//	}
 
-	public void setListaTelefones(List<Telefone> listaTelefones) {
-		this.listaTelefones = listaTelefones;
-	}
-	
 }

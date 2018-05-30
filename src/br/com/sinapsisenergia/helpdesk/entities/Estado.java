@@ -1,7 +1,45 @@
 package br.com.sinapsisenergia.helpdesk.entities;
 
-public enum Estado {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-	AC, AL, AP, AM, BA, CE, DF, ES, GO, MA, MT, MS, MG, PA, PB, PR, PE, PI, RJ, RN, RS, RO, RR, SC, SP, SE, TO;
+@Entity
+@Table(name="ESTADO")
+public class Estado {
+
+	@Id
+	@Column(name="id_estado")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int id;
+	
+	private String sigla;
+	
+	public Estado() {
+
+	}
+	
+	public Estado(String sigla) {
+		this.sigla = sigla;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getSigla() {
+		return sigla;
+	}
+
+	public void setSigla(String sigla) {
+		this.sigla = sigla;
+	}
 	
 }

@@ -52,8 +52,8 @@
 		</property>
 	</bean>
 	
-	<jee:jndi-lookup id="dataSource" jndi-name="jdbc/portalSinapsisTreina" />
-	<!-- <jee:jndi-lookup id="dataSource" jndi-name="jdc/geliLocal" /> -->
+	<jee:jndi-lookup id="dataSource" jndi-name="jdbc/helpdeskTreina" />
+	<!-- <jee:jndi-lookup id="dataSource" jndi-name="jdc/helpdesk" /> -->
 	
 	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
 		<property name="entityManagerFactory" ref="entityManagerFactory" />

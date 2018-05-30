@@ -5,10 +5,17 @@
 		
 		<!-- <jta-data-source>jdbcAlocaLicencaPool</jta-data-source> -->
 		
-		<class>br.com.sinapsisenergia.helpdesk.entities.Usuario</class>
+		<class>br.com.sinapsisenergia.helpdesk.entities.Departamento</class>
+		<class>br.com.sinapsisenergia.helpdesk.entities.Download</class>
 		<class>br.com.sinapsisenergia.helpdesk.entities.Empresa</class>
 		<class>br.com.sinapsisenergia.helpdesk.entities.Endereco</class>
+		<class>br.com.sinapsisenergia.helpdesk.entities.Estado</class>
+		<class>br.com.sinapsisenergia.helpdesk.entities.FAQ</class>
+		<class>br.com.sinapsisenergia.helpdesk.entities.Perfil</class>
+		<class>br.com.sinapsisenergia.helpdesk.entities.Produto</class>
 		<class>br.com.sinapsisenergia.helpdesk.entities.Telefone</class>
+		<class>br.com.sinapsisenergia.helpdesk.entities.TipoTelefone</class>
+		<class>br.com.sinapsisenergia.helpdesk.entities.Usuario</class>
 		
 		
 		<!-- <provider>org.hibernate.jpa.HibernatePersistence</provider> -->
