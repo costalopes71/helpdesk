@@ -12,6 +12,7 @@ public class GenericDAOImpl<T, K> implements GenericDAO<T, K> {
 
 	@PersistenceContext
 	protected EntityManager em;
+	
 	private Class<T> classe;
 	
 	@SuppressWarnings("unchecked")

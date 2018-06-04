@@ -52,11 +52,9 @@ public class Empresa {
 
 	}
 
-	public Empresa(int idEmpresaPai, String nome, Set<Usuario> listaUsuarios, Endereco endereco,
-			Set<EmpresaProduto> empresaProduto) {
+	public Empresa(int idEmpresaPai, String nome, Endereco endereco, Set<EmpresaProduto> empresaProduto) {
 		this.idEmpresaPai = idEmpresaPai;
 		this.nome = nome;
-		this.listaUsuarios = listaUsuarios;
 		this.endereco = endereco;
 		this.empresaProduto = empresaProduto;
 	}

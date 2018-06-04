@@ -12,6 +12,7 @@
 	padding-top: 40px;
 	padding-bottom: 30px;
 }
+
 #footer a {
 	color: #ffffff;
 }
@@ -42,3 +43,6 @@ li.dropdown:hover > .dropdown-menu {
 #breadcrumb-faq{
 	margin-left: 650px;
 }
+
+
+

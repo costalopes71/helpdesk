@@ -18,13 +18,10 @@ public class Produto {
 	
 	private String nome;
 	
-	private String desenvolvedor;
-
 	public Produto() { }
 
-	public Produto(String nome, String desenvolvedor) {
+	public Produto(String nome) {
 		this.nome = nome;
-		this.desenvolvedor = desenvolvedor;
 	}
 
 	public int getId() {
@@ -43,12 +40,4 @@ public class Produto {
 		this.nome = nome;
 	}
 
-	public String getDesenvolvedor() {
-		return desenvolvedor;
-	}
-
-	public void setDesenvolvedor(String desenvolvedor) {
-		this.desenvolvedor = desenvolvedor;
-	}
-	
 }

@@ -8,6 +8,7 @@
 		<class>br.com.sinapsisenergia.helpdesk.entities.Departamento</class>
 		<class>br.com.sinapsisenergia.helpdesk.entities.Download</class>
 		<class>br.com.sinapsisenergia.helpdesk.entities.Empresa</class>
+		<class>br.com.sinapsisenergia.helpdesk.entities.EmpresaProduto</class>
 		<class>br.com.sinapsisenergia.helpdesk.entities.Endereco</class>
 		<class>br.com.sinapsisenergia.helpdesk.entities.Estado</class>
 		<class>br.com.sinapsisenergia.helpdesk.entities.FAQ</class>

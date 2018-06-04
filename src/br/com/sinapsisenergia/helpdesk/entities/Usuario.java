@@ -1,5 +1,6 @@
 package br.com.sinapsisenergia.helpdesk.entities;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -18,7 +19,9 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="USUARIO")
-public class Usuario {
+public class Usuario implements Serializable {
+
+	private static final long serialVersionUID = 1456631124569822424L;
 
 	@Id
 	@Column(name="id_usuario")

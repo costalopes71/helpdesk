@@ -12,7 +12,7 @@
 
 <body>
 
-	<!-- INICIO Menu Superiro -->
+	<!-- INICIO Menu Superior -->
 	<%@include file="../templates/menu_superior.jsp"%>
 	<!-- FIM Menu Superiro -->
 	
@@ -22,7 +22,7 @@
 		<h1 class="mt-4 mb-3">Quem Somos</h1>
 
 		<ol class="breadcrumb">
-			<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+			<li class="breadcrumb-item"><a href="<c:url value="/login/welcome"/>">Home</a></li>
 			<li class="breadcrumb-item active">Quem Somos</li>
 			<form class="form-inline" id="breadcrumb-faq">
 			    <div class="input-group">

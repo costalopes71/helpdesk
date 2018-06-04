@@ -18,8 +18,8 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter {
 		
 		String requestURI = request.getRequestURI();
 		if (!requestURI.equals("/login/") || !requestURI.equals("") || !requestURI.equals("/")) {
-			Usuario gestor = (Usuario) request.getSession().getAttribute("usuarioLogado");
-			if (gestor == null) {
+			Usuario usuario = (Usuario) request.getSession().getAttribute("usuarioLogado");
+			if (usuario == null) {
 				response.sendRedirect(request.getContextPath() + "/login/");
 				return false;
 			}

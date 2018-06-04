@@ -6,16 +6,27 @@
 <html>
 
 <!-- inicio do head -->
-<%@include file="../templates/header.jsp"%>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Login | Help Desk Sinapsis</title>
+	
+	<!-- CSS includes -->
+	<link rel="shortcut icon" type="image/png" href="<c:url value="/resources/images/logo_portal.ico" />"/>
+	<link rel="stylesheet" href="<c:url value="/resources/css/bootstrap_3.css"/>">
+	<link rel="stylesheet" href="<c:url value="/resources/fonts/font-awesome.min.css"/>">
+	<link rel="stylesheet" href="<c:url value="/resources/css/login_style.css"/>">
+</head>
 <!-- fim do head -->
 
 <body id="login-init">
 	<div class="row">
-		<div
-			class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
+		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
 			<div class="login-panel panel panel-default">
 				<div class="panel-heading text-center">
-					<img class="img-responsive img-center" alt="etc" src="<c:url value="/resources/images/logo.png"/>"/>
+					<img class="img-responsive img-center" alt="etc" src="<c:url value="/resources/images/logo_login.jpg"/>"/>
 				</div>
 				<div class="text-center">
 					<h4>Help Desk Sinapsis</h4>
@@ -34,7 +45,7 @@
 								<form:password path="password" name="password" id="password" class="form-control" placeholder="Senha"/>
 							</div>
 							
-							<form:button id="login-init" name="login" class="btn btn-primary btn-block">Login</form:button>
+							<form:button id="login-init" name="login" class="btn btn-primary btn-block" style="height: 40px;">Login</form:button>
 						</fieldset>
 						
 					</form:form>
@@ -49,6 +60,6 @@
 	<!-- /.row -->
 	
 	<%@include file="../templates/scripts.jsp"%>
-		
+			
 </body>
 </html>

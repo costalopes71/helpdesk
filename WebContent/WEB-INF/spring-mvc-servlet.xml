@@ -13,8 +13,9 @@
 						http://www.springframework.org/schema/tx
 						http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
 						http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.0.xsd">
-	<context:component-scan
-		base-package="br.com.sinapsisenergia.helpdesk.controller"/>
+	<context:component-scan base-package="br.com.sinapsisenergia.helpdesk.controller,
+										br.com.sinapsisenergia.helpdesk.bo,
+										br.com.sinapsisenergia.helpdesk.dao"/>
 	<context:annotation-config />
 	<mvc:annotation-driven />
 	
@@ -31,14 +32,14 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 
-	<!-- 
+	
 	<mvc:interceptors>
 		<mvc:interceptor>
-			<mvc:mapping path="/empresa/**" />
+			<mvc:mapping path="/login/welcome" />
 			<bean class="br.com.sinapsisenergia.helpdesk.security.AuthenticationInterceptor"></bean>
 		</mvc:interceptor>
 	</mvc:interceptors>
-	 -->
+	
 	 
 	<mvc:default-servlet-handler />
 	<bean id="entityManagerFactory"
@@ -52,7 +53,7 @@
 		</property>
 	</bean>
 	
-	<jee:jndi-lookup id="dataSource" jndi-name="jdbc/helpdeskTreina" />
+	<jee:jndi-lookup id="dataSource" jndi-name="jdbc/helpdeskTreina"/>
 	<!-- <jee:jndi-lookup id="dataSource" jndi-name="jdc/helpdesk" /> -->
 	
 	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
